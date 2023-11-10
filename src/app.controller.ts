@@ -9,6 +9,11 @@ export class AppController {
   getHello(): string {
     let hello = this.appService.getHello();
     console.log(hello);
-    return hello;
+    return `{
+      ATN employé essence : ${hello.ATNemployeEssence} -------------
+      ATN employé diesel : ${hello.ATNemployeDiesel} -------------
+      ATN employeur essence : ${hello.ATNemployeurEssence} -------------
+      ATN employeur diesel : ${hello.ATNemployeurDiesel} -------------
+    }`;
   }
 }
